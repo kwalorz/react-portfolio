@@ -13,12 +13,12 @@ const Header = () => {
     <header>
       <div className='waves layer-top'></div>
       <div className='waves layer-bottom'></div>
-      <div className='overlay' />
       <div className='hamburger_menu' onClick={toggleMobileNav}>
         <div className='hamburger_line'></div>
         <div className='hamburger_line'></div>
         <div className='hamburger_line'></div>
       </div>
+      <div className={`overlay ${openMobileNav ? 'overlay-blur' : ''}`}></div>
       <nav className={`${openMobileNav ? 'nav--open' : 'nav--close'}`}>
         <span className='close_nav' onClick={toggleMobileNav}>
           ×

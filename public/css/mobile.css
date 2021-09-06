@@ -1,29 +1,9 @@
 /*Portrait*/
-@media only screen and (min-device-width: 280px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 280px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
   /*Home Page*/
-
-  header {
-    z-index: 1;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.3);
-  }
 
   .waves {
     aspect-ratio: 250/600;
-  }
-
-  .layer-top,
-  .layer-bottom {
-    animation: none;
   }
 
   .hamburger_menu {
@@ -35,35 +15,13 @@
     height: 35px;
     top: 30px;
     right: 20px;
+    backdrop-filter: blur(40px);
   }
 
   .hamburger_menu .hamburger_line {
     background-color: #fff;
     width: 100%;
     height: 5px;
-  }
-  nav {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    height: 80%;
-    width: 50%;
-    z-index: 50;
-    border-radius: 20px 0px 0px 20px;
-    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background: rgba(127, 51, 165, 1);
-    background: linear-gradient(
-      45deg,
-      rgba(127, 51, 165, 1) 0%,
-      rgba(23, 120, 247, 1) 100%
-    );
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#c700ff",GradientType=1);
-    transform: translateX(200%);
-    transition: transform 0.8s ease-in-out;
   }
 
   .nav--close {
@@ -75,15 +33,70 @@
   }
 
   .close_nav {
+    position: fixed;
+    z-index: 20;
+    top: 30px;
+    right: 10px;
     display: block;
     font-size: 7vh;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+  }
+
+  .overlay-blur {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+  nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    top: 20px;
+    right: 0;
+    height: 80%;
+    width: 50%;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+    background: rgb(208, 18, 166);
+    background: -moz-linear-gradient(
+      315deg,
+      rgba(208, 18, 166, 1) 27%,
+      rgba(20, 149, 240, 1) 72%
+    );
+    background: -webkit-linear-gradient(
+      315deg,
+      rgba(208, 18, 166, 1) 27%,
+      rgba(20, 149, 240, 1) 72%
+    );
+    background: linear-gradient(
+      315deg,
+      rgba(208, 18, 166, 1) 27%,
+      rgba(20, 149, 240, 1) 72%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d012a6",endColorstr="#1495f0",GradientType=1);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transform: translateX(200%);
+    transition: transform 0.8s ease-in-out;
   }
 
   nav ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
   }
 
   nav ul li {
@@ -132,9 +145,13 @@
     z-index: 60;
   }
   .slider_btn-left {
+    position: sticky;
+    left: 0;
     border-radius: 0px 8px 8px 0px;
   }
   .slider_btn-right {
+    position: sticky;
+    right: 0;
     border-radius: 8px 0px 0px 8px;
   }
 
@@ -266,12 +283,17 @@
     padding: 1.5rem 0;
   }
 
-  .fa-bars {
-    display: block;
-    font-size: 3vw;
-    color: #fff;
-    margin-top: 5px;
+  .hamburger_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 30px;
+    right: 20px;
   }
+
   nav {
     display: block;
     position: absolute;
