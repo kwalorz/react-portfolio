@@ -1,23 +1,16 @@
-import React, { useContext, useState } from 'react';
-import { ModalContext } from '../ModalProvider';
+import React, { useContext } from 'react';
+import './Projects.css';
+import nextJSImg from '../../img/next-js-landing-page.png';
+import reactModalImg from '../../img/React_modal-window.png';
+import topQualityPaintImg from '../../img/top_quality_paint.png';
+import maptyImg from '../../img/mapty_app.png';
+import { ModalContext } from '../../Helper/ModalProvider';
+import useProjectsLogic from './ProjectsLogic';
 
 const Projects = () => {
   const newState = useContext(ModalContext);
-  const [carouselPosition, setPosition] = useState(0);
-  let angle = (carouselPosition / 4) * -360;
 
-  const slideLeft = () => {
-    if (carouselPosition === 0)
-      setPosition((prevPosition) => (prevPosition = 3));
-    else if (carouselPosition !== 0)
-      setPosition((prevPosition) => prevPosition - 1);
-  };
-  const slideRight = () => {
-    if (carouselPosition === 3)
-      setPosition((prevPosition) => (prevPosition = 0));
-    else if (carouselPosition !== 3)
-      setPosition((prevPosition) => prevPosition + 1);
-  };
+  const { carouselPosition, angle, slideLeft, slideRight } = useProjectsLogic();
 
   return (
     <div
@@ -40,10 +33,7 @@ const Projects = () => {
               style={{ transform: `rotateY(${angle}deg)` }}
             >
               <div className='project_window'>
-                <img
-                  src='img/next-js-landing-page.png'
-                  alt='next js landing page'
-                />
+                <img src={nextJSImg} alt='next js landing page' />
                 <div
                   className={`project_description ${
                     carouselPosition === 0
@@ -80,10 +70,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className='project_window'>
-                <img
-                  src='img/React_modal-window.png'
-                  alt='modal-windows-reactjs'
-                />
+                <img src={reactModalImg} alt='modal-windows-reactjs' />
                 <div
                   className={`project_description ${
                     carouselPosition === 1
@@ -120,7 +107,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className='project_window'>
-                <img src='img/top_quality_paint.png' alt='painting website' />
+                <img src={topQualityPaintImg} alt='painting website' />
                 <div
                   className={`project_description ${
                     carouselPosition === 2
@@ -147,7 +134,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className='project_window'>
-                <img src='img/mapty_app.png' alt='mapty_app' />
+                <img src={maptyImg} alt='mapty_app' />
                 <div
                   className={`project_description ${
                     carouselPosition === 3

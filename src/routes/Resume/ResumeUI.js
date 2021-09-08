@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
-import { ModalContext } from "../ModalProvider";
+import React, { useContext } from 'react';
+import './Resume.css';
+import resumeImg from '../../img/Resume_2021.pdf';
+import { ModalContext } from '../../Helper/ModalProvider';
 
 const Resume = () => {
   const newState = useContext(ModalContext);
@@ -19,7 +21,7 @@ const Resume = () => {
           <h1>Download My Resume</h1>
           <a
             className='resume-btn'
-            href='img/Resume_2021.pdf'
+            href={resumeImg}
             download='kevin-walorz_resume'
           >
             PDF

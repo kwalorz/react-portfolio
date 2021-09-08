@@ -1,56 +1,22 @@
-import React, { useContext, useState } from "react";
-import { ModalContext } from "../ModalProvider";
+import React, { useContext } from 'react';
+import useFormValidation from './ContactLogic';
+import { ModalContext } from '../../Helper/ModalProvider';
 
 const Contact = () => {
   const newState = useContext(ModalContext);
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [errName, setErrName] = useState("");
-  const [errEmail, setErrEmail] = useState("");
-  const [errPhone, setErrPhone] = useState("");
 
-  const formValidation = (e) => {
-    e.preventDefault();
-
-    function validateName() {
-      if (name === "") setErrName("*Name Required");
-      if (name !== "") {
-        const nameValue = name.trim();
-        const onlyLetters = /^[a-z]+$/i;
-        if (!onlyLetters.test(nameValue))
-          setErrName("*Please enter a valid name");
-      }
-    }
-
-    function validateEmail() {
-      if (phoneNumber === "" && email === "")
-        setErrEmail("*Please enter either a phone number or email");
-      if (email !== "") {
-        const emailValue = email.trim();
-        const emailCheck = /^\S+@\S+\.\S+$/;
-
-        if (!emailCheck.test(emailValue))
-          setErrEmail("*Please enter a valid email");
-      }
-    }
-
-    function validatePhoneNum() {
-      if (phoneNumber === "" && email === "")
-        setErrPhone("*Please enter either a phone number or email");
-      if (phoneNumber !== "") {
-        const phoneValue = phoneNumber.replace(/-/g, "").trim();
-        const onlyNumbers = /^[0-9]*$/;
-
-        if (!onlyNumbers.test(phoneValue) || phoneValue.length < 10)
-          setErrPhone("*Please enter a valid phone number");
-      }
-    }
-
-    validateName();
-    validateEmail();
-    validatePhoneNum();
-  };
+  const {
+    formValidation,
+    name,
+    email,
+    phoneNumber,
+    setName,
+    setEmail,
+    setPhoneNumber,
+    errName,
+    errEmail,
+    errPhone,
+  } = useFormValidation();
 
   return (
     <div

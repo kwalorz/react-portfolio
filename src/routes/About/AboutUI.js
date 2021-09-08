@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
-import { ModalContext } from "../ModalProvider";
+import React, { useContext } from 'react';
+import './About.css';
+import bioImg from '../../img/bio-picture.jpg';
+import { ModalContext } from '../../Helper/ModalProvider';
 
 const About = () => {
   const newState = useContext(ModalContext);
@@ -17,7 +19,7 @@ const About = () => {
         </span>
 
         <div className='about-content'>
-          <img className='about-photo' src='img/bio-picture.jpg' alt='bio' />
+          <img className='about-photo' src={bioImg} alt='bio' />
           <div className='about-text'>
             <h1>About Me</h1>
             <p>

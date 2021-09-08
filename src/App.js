@@ -1,10 +1,10 @@
 import React from 'react';
-import { ModalProvider } from './components/ModalProvider';
-import Header from './components/layout/Header';
-import Projects from './components/layout/Projects';
-import About from './components/layout/About';
-import Resume from './components/layout/Resume';
-import Contact from './components/layout/Contact';
+import { ModalProvider } from './Helper/ModalProvider';
+import Header from './routes/Header/HeaderUI';
+import Projects from './routes/Projects/ProjectsUI';
+import About from './routes/About/AboutUI';
+import Resume from './routes/Resume/ResumeUI';
+import Contact from './routes/Contact/ContactUI';
 
 const App = () => {
   return (

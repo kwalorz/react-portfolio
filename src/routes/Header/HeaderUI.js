@@ -1,14 +1,11 @@
-import React, { useContext, useState } from 'react';
-import { ModalContext } from '../ModalProvider';
+import React, { useContext } from 'react';
+import './Header.css';
+import { ModalContext } from '../../Helper/ModalProvider';
+import useHeaderLogic from './HeaderLogic';
 
 const Header = () => {
   const newState = useContext(ModalContext);
-  const [openMobileNav, setMobileNav] = useState(false);
-
-  const toggleMobileNav = () => {
-    setMobileNav((prevState) => !prevState);
-  };
-
+  const { openMobileNav, toggleMobileNav } = useHeaderLogic();
   return (
     <header>
       <div className='waves layer-top'></div>
