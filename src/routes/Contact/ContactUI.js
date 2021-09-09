@@ -1,22 +1,11 @@
 import React, { useContext } from 'react';
-import useFormValidation from './ContactLogic';
+import ContactForm from './ContactForm/ContactForm';
+import './Contact.css';
+
 import { ModalContext } from '../../Helper/ModalProvider';
 
 const Contact = () => {
   const newState = useContext(ModalContext);
-
-  const {
-    formValidation,
-    name,
-    email,
-    phoneNumber,
-    setName,
-    setEmail,
-    setPhoneNumber,
-    errName,
-    errEmail,
-    errPhone,
-  } = useFormValidation();
 
   return (
     <div
@@ -32,59 +21,7 @@ const Contact = () => {
         <div className='contact-content'>
           <h1>Contact Me</h1>
           <div className='contact-info'>
-            <form
-              action='https://formsubmit.co/1ccfbfc31c68edcda3ad4404f958fd35'
-              method='POST'
-              encType='multipart/form-data'
-              onSubmit={formValidation}
-            >
-              <input
-                type='hidden'
-                name='_subject'
-                value='New Form Submission'
-              />
-              <label htmlFor='name'>Name</label>
-              <span className='error-message'>{errName}</span>
-              <input
-                type='text'
-                id='name'
-                name='name'
-                placeholder='John Doe'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-              <label htmlFor='email'>Email</label>
-              <span className='error-message'>{errEmail}</span>
-              <input
-                type='email'
-                id='email'
-                name='email'
-                placeholder='@youremail.com'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <label htmlFor='phone'>Phone</label>
-              <span className='error-message'>{errPhone}</span>
-              <input
-                type='tel'
-                name='phone'
-                id='phone'
-                placeholder='555-555-5555'
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-              />
-              <label htmlFor='message'>Leave a message</label>
-              <textarea
-                name='message'
-                id='message'
-                cols='40'
-                rows='4'
-              ></textarea>
-              <button type='submit' className='btn'>
-                SUBMIT
-              </button>
-            </form>
+            <ContactForm />
             <div className='border-right'></div>
             <div className='contact-icons'>
               <div className='phone'>
