@@ -24,11 +24,11 @@ const Contact = () => {
             <ContactForm />
             <div className='border-right'></div>
             <div className='contact-icons'>
-              <div className='phone'>
+              <div className='phone-icon'>
                 <i className='fas fa-phone-square fa-3x'></i>
                 <span>781-985-4659</span>
               </div>
-              <div className='email'>
+              <div className='email-icon'>
                 <i className='fas fa-envelope fa-3x'></i>
                 <a href='mailto:kmwalorz@gmail.com?'>kmwalorz@gmail.com</a>
               </div>

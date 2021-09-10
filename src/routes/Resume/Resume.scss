@@ -1,15 +1,17 @@
 .modal-content-resume {
   position: relative;
-  background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px;
   width: 400px;
   height: 200px;
   display: flex;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.075);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  backdrop-filter: blur(40px);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(46, 54, 68, 0.5);
 }
 
 .resume-content {
@@ -19,6 +21,7 @@
   align-items: center;
 
   h1 {
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 1.8rem;
