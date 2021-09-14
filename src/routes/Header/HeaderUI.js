@@ -1,48 +1,17 @@
 import React, { useContext } from 'react';
 import './Header.css';
+import Navbar from '../../components/Navbar/Navbar';
 import { ModalContext } from '../../Helper/ModalProvider';
-import useHeaderLogic from './HeaderLogic';
+import Button from '../../components/Button/Button';
 
 const Header = () => {
   const newState = useContext(ModalContext);
-  const { openMobileNav, toggleMobileNav } = useHeaderLogic();
+
   return (
     <header>
       <div className='waves layer-top'></div>
       <div className='waves layer-bottom'></div>
-      <div className='hamburger_menu' onClick={toggleMobileNav}>
-        <div className='hamburger_line'></div>
-        <div className='hamburger_line'></div>
-        <div className='hamburger_line'></div>
-      </div>
-      <div className={`overlay ${openMobileNav ? 'overlay-blur' : ''}`}></div>
-      <nav className={`${openMobileNav ? 'nav--open' : 'nav--close'}`}>
-        <span className='close_nav' onClick={toggleMobileNav}>
-          ×
-        </span>
-        <ul>
-          <li>
-            <button id='projects-btn' onClick={newState.openModalProjects}>
-              Projects
-            </button>
-          </li>
-          <li>
-            <button id='about-btn' onClick={newState.openModalAbout}>
-              About
-            </button>
-          </li>
-          <li>
-            <button id='resume-btn' onClick={newState.openModalResume}>
-              Resume
-            </button>
-          </li>
-          <li>
-            <button id='contact-btn' onClick={newState.openModalContact}>
-              Contact
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <Navbar></Navbar>
       <div className='header_glass'>
         <h1>Welcome!</h1>
         <br />
@@ -52,14 +21,7 @@ const Header = () => {
           Be sure to visit my projects page and send me a message via the
           contact button!
         </p>
-        <button
-          className='home-btn'
-          onClick={() => {
-            newState.openModalProjects(true);
-          }}
-        >
-          VIEW PROJECTS
-        </button>
+        <Button onClick={newState.openModalProjects}>View Projects</Button>
       </div>
       <div className='social_icons'>
         <a

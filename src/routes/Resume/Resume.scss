@@ -27,26 +27,9 @@
     margin-top: 1.8rem;
     margin-bottom: 3rem;
   }
-}
 
-.resume-btn {
-  padding: 1rem 3rem;
-  opacity: 1;
-  border-radius: 20px;
-  color: #ffff;
-  text-decoration: none;
-  background: rgb(24, 0, 36);
-  background: linear-gradient(
-    45deg,
-    rgba(24, 0, 36, 0.7343312324929971) 33%,
-    rgba(0, 116, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
-  transition: all 0.1s ease-in-out;
-
-  &:hover {
-    padding: 1rem 3.3rem;
-    cursor: pointer;
-    opacity: 0.9;
+  a {
+    text-decoration: none;
+    color: #fff;
   }
 }

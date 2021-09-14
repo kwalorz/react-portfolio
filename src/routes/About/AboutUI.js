@@ -19,12 +19,14 @@ const About = () => {
         </span>
 
         <div className='about-content'>
-          <img className='about-photo' src={bioImg} alt='bio' />
+          <div className='photo-container'>
+            <img className='about-photo' src={bioImg} alt='bio' />
+          </div>
           <div className='about-text'>
             <h1>About Me</h1>
             <p>
               I am a self taught developer with experience creating projects in
-              HTML, CSS, and JavaScript. <br />
+              HTML, CSS, and JavaScript using the React JS library. <br />
               <br />
               My main focus has been gaining proficiency with JavaScript, but I
               am eager to learn new languages, libraries, and frameworks for my

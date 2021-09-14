@@ -1,3 +1,4 @@
+import Button from '../../../components/Button/Button';
 import useFormValidation from './ContactFormLogic';
 
 const ContactForm = () => {
@@ -46,9 +47,7 @@ const ContactForm = () => {
         cols='40'
         rows='4'
       ></textarea>
-      <button type='submit' className='btn'>
-        SUBMIT
-      </button>
+      <Button type='submit'>Submit</Button>
     </form>
   );
 };

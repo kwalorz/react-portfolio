@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useHeaderLogic = () => {
+const useNavbarLogic = () => {
   const [openMobileNav, setMobileNav] = useState(false);
 
   const toggleMobileNav = () => {
@@ -10,4 +10,4 @@ const useHeaderLogic = () => {
   return { openMobileNav, toggleMobileNav };
 };
 
-export default useHeaderLogic;
+export default useNavbarLogic;

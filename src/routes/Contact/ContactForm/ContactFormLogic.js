@@ -39,12 +39,6 @@ const useFormValidation = () => {
       },
       body: JSON.stringify(data),
     });
-    return {
-      submitSuccess: {
-        hideForm: 'form-hidden',
-        showMessage: 'thank_you_message',
-      },
-    };
   };
 
   return {
