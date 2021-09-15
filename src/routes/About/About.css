@@ -1,2 +1,12 @@
-.modal-content-about{position:relative;margin:5% auto;max-width:400px;background-color:rgba(255,255,255,0.075);background-clip:padding-box;border:2px solid transparent;padding:20px;-webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px);border-radius:10px;-webkit-box-shadow:3px 3px 5px rgba(17,30,54,0.5);box-shadow:3px 3px 5px rgba(17,30,54,0.5);overflow:hidden}.about-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:wrap;flex-wrap:wrap}.photo-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.about-photo{height:150px;width:150px;border-radius:50%;-o-object-fit:cover center;object-fit:cover center;border:1px solid transparent;-webkit-box-shadow:3px 3px 5px rgba(17,30,54,0.5);box-shadow:3px 3px 5px rgba(17,30,54,0.5);background-clip:padding-box}.about-text h1{font-size:1.5rem;text-align:center;margin:1rem 0;color:#fff}.about-text p{color:#fff;line-height:1.8}
+.modal_content-about img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover center;
+  object-fit: cover center;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 3px 3px 5px rgba(17, 30, 54, 0.5);
+  box-shadow: 3px 3px 5px rgba(17, 30, 54, 0.5);
+  background-clip: padding-box;
+}
 /*# sourceMappingURL=About.css.map */

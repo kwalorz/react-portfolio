@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Card from '../../components/Cards/Cards';
 import ContactForm from './ContactForm/ContactForm';
 import './Contact.css';
 
@@ -14,12 +15,11 @@ const Contact = () => {
         newState.openContact ? `modal--visible` : `modal--closed`
       }`}
     >
-      <div className='modal-content-contact'>
-        <span className='close' onClick={newState.closeModalContact}>
-          &times;
-        </span>
-        <div className='contact-content'>
-          <h1>Contact Me</h1>
+      <div className='modal_content-contact modal-center'>
+        <Card title='Contact Me'>
+          <span className='close' onClick={newState.closeModalContact}>
+            &times;
+          </span>
           <div className='contact-info'>
             <ContactForm />
             <div className='border-right'></div>
@@ -34,7 +34,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   );

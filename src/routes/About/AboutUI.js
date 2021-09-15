@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './About.css';
+import Card from '../../components/Cards/Cards';
 import bioImg from '../../img/bio-picture.jpg';
 import { ModalContext } from '../../Helper/ModalProvider';
 
@@ -13,17 +14,12 @@ const About = () => {
         newState.openAbout ? `modal--visible` : `modal--closed`
       }`}
     >
-      <div className='modal-content-about'>
-        <span className='close' onClick={newState.closeModalAbout}>
-          ×
-        </span>
-
-        <div className='about-content'>
-          <div className='photo-container'>
-            <img className='about-photo' src={bioImg} alt='bio' />
-          </div>
-          <div className='about-text'>
-            <h1>About Me</h1>
+      <div className='modal_content-about modal-center'>
+        <Card
+          imageSrc={bioImg}
+          altText='bio'
+          title='About Me'
+          description={
             <p>
               I am a self taught developer with experience creating projects in
               HTML, CSS, and JavaScript using the React JS library. <br />
@@ -32,8 +28,14 @@ const About = () => {
               am eager to learn new languages, libraries, and frameworks for my
               own curiousity and to fit my future employer's needs.
             </p>
-          </div>
-        </div>
+          }
+        >
+          {
+            <span className='close' onClick={newState.closeModalAbout}>
+              ×
+            </span>
+          }
+        </Card>
       </div>
     </div>
   );

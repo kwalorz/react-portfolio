@@ -11,7 +11,7 @@ const Header = () => {
     <header>
       <div className='waves layer-top'></div>
       <div className='waves layer-bottom'></div>
-      <Navbar></Navbar>
+      <Navbar />
       <div className='header_glass'>
         <h1>Welcome!</h1>
         <br />

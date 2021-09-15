@@ -1,9 +1,10 @@
 import React from 'react';
 import { ModalProvider } from './Helper/ModalProvider';
+import './ModalStyles/ModalStyles.css';
 import Header from './routes/Header/HeaderUI';
 import Projects from './routes/Projects/ProjectsUI';
 import About from './routes/About/AboutUI';
-import Resume from './routes/Resume/ResumeUI';
+import Resume from './routes/ResumeUI';
 import Contact from './routes/Contact/ContactUI';
 
 const App = () => {
