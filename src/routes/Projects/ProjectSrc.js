@@ -1,7 +1,6 @@
 import nextJSImg from '../../img/next-js-landing-page.png';
 import reactModalImg from '../../img/React_modal-window.png';
 import topQualityPaintImg from '../../img/top_quality_paint.png';
-import maptyImg from '../../img/mapty_app.png';
 
 const ProjectSrc = [
   {
