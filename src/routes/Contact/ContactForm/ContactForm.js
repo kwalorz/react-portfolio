@@ -47,7 +47,7 @@ const ContactForm = () => {
         cols='40'
         rows='4'
       ></textarea>
-      <Button type='submit'>Submit</Button>
+      <Button label='Submit' type='submit' />
     </form>
   );
 };

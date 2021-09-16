@@ -4,7 +4,13 @@ const Button = ({ children, onClick, type, label, link }) => {
   console.log('rendered');
   return (
     <button className='btn' onClick={onClick} type={type}>
-      {label || children}
+      {link ? (
+        <a href={link} target='_blank' rel='noopener noreferrer'>
+          {label}
+        </a>
+      ) : (
+        label
+      )}
     </button>
   );
 };

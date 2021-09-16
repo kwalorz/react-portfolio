@@ -2,13 +2,13 @@ import nextJSImg from '../../img/next-js-landing-page.png';
 import reactModalImg from '../../img/React_modal-window.png';
 import topQualityPaintImg from '../../img/top_quality_paint.png';
 
-const ProjectSrc = [
+const projectSrc = [
   {
-    projectTitle: 'Next JS Landing Page',
-    projectImg: { imgSrc: nextJSImg, altText: 'next js landing page' },
-    projectDescription:
+    projTitle: 'Next JS Landing Page',
+    projImg: { imgSrc: nextJSImg, altText: 'next js landing page' },
+    projDescription:
       'Project converted from standard HTML/CSS and optimized for Next JS. Posts are linked to articles written in .md files. Files are then parsed and compiled using Marked and gray-matter packages.',
-    projectButtons: [
+    projButtons: [
       {
         label: 'Source Code',
         link: 'https://github.com/kwalorz/landing_page',
@@ -24,11 +24,11 @@ const ProjectSrc = [
     ],
   },
   {
-    projectTitle: 'React JS: Email Capture Window',
-    projectImg: { imgSrc: reactModalImg, altText: 'modal pop up window' },
-    projectDescription:
+    projTitle: 'React JS: Email Capture Window',
+    projImg: { imgSrc: reactModalImg, altText: 'modal pop up window' },
+    projDescription:
       "Modal appears when user's mouse leaves the main content area. Cookies are also used to prevent the modal from popping upagain for a preset amount of time if they decide they are not interested in the offer.",
-    projectButtons: [
+    projButtons: [
       {
         label: 'Source Code',
         link: 'https://github.com/kwalorz/email_capture-react',
@@ -44,14 +44,14 @@ const ProjectSrc = [
     ],
   },
   {
-    projectTitle: 'Top Quality Painting Co',
-    projectImg: {
+    projTitle: 'Top Quality Painting Co',
+    projImg: {
       imgSrc: topQualityPaintImg,
       altText: 'wordpress website',
     },
-    projectDescription:
-      'Responsive 5-page website layout made with WordPress using the Divi design tool.Project consists of custom CSS used for styling.',
-    projectButtons: [
+    projDescription:
+      'Responsive 5-page website layout made with WordPress using the Divi design tool.proj consists of custom CSS used for styling.',
+    projButtons: [
       {
         label: 'Visit Site',
         link: 'https://topqualitypaintco.com/',
@@ -61,11 +61,11 @@ const ProjectSrc = [
     ],
   },
   //   {
-  //     projectTitle: 'Work Out Tracking App',
-  //     projectImg: { imgSrc: maptyImg, altText: 'leaflet api map' },
-  //     projectDescription:
-  //       'Made with HTML, CSS, and JavaScript. Project utilizes Leaflet API for geolocation services totrack workouts.',
+  //     projTitle: 'Work Out Tracking App',
+  //     projImg: { imgSrc: maptyImg, altText: 'leaflet api map' },
+  //     projDescription:
+  //       'Made with HTML, CSS, and JavaScript. proj utilizes Leaflet API for geolocation services totrack workouts.',
   //   },
 ];
 
-export default ProjectSrc;
+export default projectSrc;

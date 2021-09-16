@@ -1,29 +1,12 @@
 import './Cards.css';
-import Button from '../Button/Button';
 
-const Card = ({ imageSrc, altText, title, description, buttons, children }) => {
+const Card = ({ imgSrc, altText, title, description, children }) => {
   return (
     <div className={`card`}>
-      {imageSrc ? <img src={imageSrc} alt={altText} /> : ''}
-      <h1>{title}</h1>
+      {imgSrc ? <img src={imgSrc} alt={altText} /> : ''}
+      {title ? <h1>{title}</h1> : ''}
+      <br />
       {description ? <p>{description}</p> : ''}
-      {buttons?.map((btn, index) => (
-        <Button key={`button-${index}`}>
-          {btn.link ? (
-            <a
-              href={btn.link}
-              target={btn.target}
-              download={btn.download}
-              rel={btn.rel}
-              alt={btn.altText}
-            >
-              {btn.label}
-            </a>
-          ) : (
-            btn.label
-          )}
-        </Button>
-      ))}
       {children}
     </div>
   );

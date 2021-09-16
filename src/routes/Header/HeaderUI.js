@@ -21,7 +21,7 @@ const Header = () => {
           Be sure to visit my projects page and send me a message via the
           contact button!
         </p>
-        <Button onClick={newState.openModalProjects}>View Projects</Button>
+        <Button label='View Projects' onClick={newState.openModalProjects} />
       </div>
       <div className='social_icons'>
         <a
