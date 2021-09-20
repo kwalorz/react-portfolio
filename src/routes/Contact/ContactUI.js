@@ -1,25 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Card from '../../components/Cards/Cards';
 import ContactForm from './ContactForm/ContactForm';
 import './Contact.css';
 
-import { ModalContext } from '../../Helper/ModalProvider';
-
 const Contact = () => {
-  const newState = useContext(ModalContext);
-
   return (
-    <div
-      id='contact-section'
-      className={`modal ${
-        newState.openContact ? `modal--visible` : `modal--closed`
-      }`}
-    >
-      <div className='modal_content-contact modal-center'>
+    <div id='contact-section' className={`modal`}>
+      <div className='waves layer-top'></div>
+      <div className='waves layer-bottom'></div>
+      <div className='contact-content'>
         <Card title='Contact Me'>
-          <span className='close' onClick={newState.closeModalContact}>
-            &times;
-          </span>
           <div className='contact-info'>
             <ContactForm />
             <div className='border-right'></div>

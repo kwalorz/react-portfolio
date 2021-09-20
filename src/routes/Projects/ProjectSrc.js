@@ -60,12 +60,6 @@ const projectSrc = [
       },
     ],
   },
-  //   {
-  //     projTitle: 'Work Out Tracking App',
-  //     projImg: { imgSrc: maptyImg, altText: 'leaflet api map' },
-  //     projDescription:
-  //       'Made with HTML, CSS, and JavaScript. proj utilizes Leaflet API for geolocation services totrack workouts.',
-  //   },
 ];
 
 export default projectSrc;

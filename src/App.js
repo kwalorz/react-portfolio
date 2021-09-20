@@ -1,21 +1,27 @@
 import React from 'react';
-import { ModalProvider } from './Helper/ModalProvider';
-import './ModalStyles/ModalStyles.css';
+import Navbar from './components/Navbar/Navbar';
 import Header from './routes/Header/HeaderUI';
 import Projects from './routes/Projects/ProjectsUI';
 import About from './routes/About/AboutUI';
-import Resume from './routes/ResumeUI';
+import Resume from './routes/Resume/ResumeUI';
 import Contact from './routes/Contact/ContactUI';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './background/background.css';
 
 const App = () => {
   return (
-    <ModalProvider>
-      <Header></Header>
-      <Projects></Projects>
-      <About></About>
-      <Resume></Resume>
-      <Contact></Contact>
-    </ModalProvider>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Header} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/about' component={About} />
+          <Route path='/resume' component={Resume} />
+          <Route path='/contact' component={Contact} />
+        </Switch>
+      </Router>
+    </>
   );
 };
 

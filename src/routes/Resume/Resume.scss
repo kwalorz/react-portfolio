@@ -1,4 +1,4 @@
-#projects-section {
+#resume-section {
   position: relative;
   background: rgb(208, 18, 166);
   background: linear-gradient(
@@ -15,12 +15,8 @@
   overflow: hidden;
 }
 
-.projects-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+.resume-content {
+  width: 50%;
+  min-width: 400px;
+  max-width: 1000px;
 }

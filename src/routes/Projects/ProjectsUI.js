@@ -1,24 +1,15 @@
-import React, { useContext } from 'react';
-import './Projects.css';
-import { ModalContext } from '../../Helper/ModalProvider';
+import React from 'react';
 import projectSrc from './ProjectSrc';
+import './Projects.css';
 import Card from '../../components/Cards/Cards';
 import Button from '../../components/Button/Button';
 
 const Projects = () => {
-  const newState = useContext(ModalContext);
-
   return (
-    <div
-      id='projects-section'
-      className={`modal ${
-        newState.openProjects ? `modal--visible ` : `modal--closed`
-      }`}
-    >
-      <span className='close' onClick={newState.closeModalProjects}>
-        ×
-      </span>
-      <div className='modal_content-projects'>
+    <div id='projects-section'>
+      <div className='waves layer-top'></div>
+      <div className='waves layer-bottom'></div>
+      <div className='projects-content'>
         {projectSrc.map((project, index) => (
           <Card
             key={`project-${index}`}
@@ -27,13 +18,16 @@ const Projects = () => {
             title={project.projTitle}
             description={project.projDescription}
           >
-            {project.projButtons.map((btn) => {
-              <Button
-                label={btn.label}
-                link={btn.link}
-                target={btn.target}
-                rel={btn.rel}
-              />;
+            {project.projButtons.map((btn, index) => {
+              return (
+                <Button
+                  key={index}
+                  label={btn.label}
+                  link={btn.link}
+                  target={btn.target}
+                  rel={btn.rel}
+                />
+              );
             })}
           </Card>
         ))}

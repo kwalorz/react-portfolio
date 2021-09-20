@@ -1,17 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Header.css';
-import Navbar from '../../components/Navbar/Navbar';
-import { ModalContext } from '../../Helper/ModalProvider';
 import Button from '../../components/Button/Button';
 
 const Header = () => {
-  const newState = useContext(ModalContext);
-
   return (
     <header>
       <div className='waves layer-top'></div>
       <div className='waves layer-bottom'></div>
-      <Navbar />
       <div className='header_glass'>
         <h1>Welcome!</h1>
         <br />
@@ -21,7 +16,7 @@ const Header = () => {
           Be sure to visit my projects page and send me a message via the
           contact button!
         </p>
-        <Button label='View Projects' onClick={newState.openModalProjects} />
+        <Button label='View Projects' />
       </div>
       <div className='social_icons'>
         <a

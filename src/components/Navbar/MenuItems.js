@@ -1,21 +1,36 @@
-const MenuItems = [
-  {
-    label: 'Projects',
-    openModal: 'openModalProjects',
-  },
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import * as IoIcons from 'react-icons/io';
 
+export const MenuItems = [
   {
-    label: 'About',
-    openModal: 'openModalAbout',
+    title: 'Home',
+    path: '/',
+    icon: <AiIcons.AiFillHome />,
+    cName: 'nav-text',
   },
   {
-    label: 'Resume',
-    openModal: 'openModalResume',
+    title: 'Projects',
+    path: '/projects',
+    icon: <FaIcons.FaHardHat />,
+    cName: 'nav-text',
   },
   {
-    label: 'Contact',
-    openModal: 'openModalContact',
+    title: 'About',
+    path: '/about',
+    icon: <FaIcons.FaUserCircle />,
+    cName: 'nav-text',
+  },
+  {
+    title: 'Resume',
+    path: '/resume',
+    icon: <IoIcons.IoIosPaper />,
+    cName: 'nav-text',
+  },
+  {
+    title: 'Contact',
+    path: '/contact',
+    icon: <AiIcons.AiFillContacts />,
+    cName: 'nav-text',
   },
 ];
-
-export default MenuItems;
