@@ -10,27 +10,30 @@ const Projects = () => {
       <div className='waves layer-top'></div>
       <div className='waves layer-bottom'></div>
       <div className='projects-content'>
-        {projectSrc.map((project, index) => (
-          <Card
-            key={`project-${index}`}
-            imgSrc={project.projImg.imgSrc}
-            altText={project.projImg.altText}
-            title={project.projTitle}
-            description={project.projDescription}
-          >
-            {project.projButtons.map((btn, index) => {
-              return (
-                <Button
-                  key={index}
-                  label={btn.label}
-                  link={btn.link}
-                  target={btn.target}
-                  rel={btn.rel}
-                />
-              );
-            })}
-          </Card>
-        ))}
+        {projectSrc.map((project, index) => {
+          return (
+            <Card
+              key={`project-${index}`}
+              wait={index}
+              imgSrc={project.projImg.imgSrc}
+              altText={project.projImg.altText}
+              title={project.projTitle}
+              description={project.projDescription}
+            >
+              {project.projButtons.map((btn, index) => {
+                return (
+                  <Button
+                    key={index}
+                    label={btn.label}
+                    link={btn.link}
+                    target={btn.target}
+                    rel={btn.rel}
+                  />
+                );
+              })}
+            </Card>
+          );
+        })}
       </div>
     </div>
   );
