@@ -1,14 +1,18 @@
 import './ButtonStyles.css';
 
-const Button = ({ children, onClick, type, label, link }) => {
+const Button = ({ addClass, onClick, type, label, link, children }) => {
   return (
-    <button className='btn' onClick={onClick} type={type}>
+    <button
+      className={`btn ${addClass ? addClass : ''}`}
+      onClick={onClick}
+      type={type}
+    >
       {link ? (
         <a href={link} target='_blank' rel='noopener noreferrer'>
           {label}
         </a>
       ) : (
-        label
+        label || children
       )}
     </button>
   );

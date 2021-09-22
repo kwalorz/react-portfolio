@@ -5,17 +5,20 @@ const Card = ({
   altText,
   title,
   description,
-  toggleOff,
-  wait,
+  imgWidth,
+  delay,
+  closeCard,
   children,
 }) => {
   return (
     <div
-      className={`card`}
-      style={{ animation: `openCards 0.5s ${wait ? wait : 0}s forwards` }}
+      className='card'
+      style={{
+        animation: `openCards 0.5s ${delay ? delay * 850 : 0}ms  forwards`,
+      }}
     >
-      {toggleOff ? <span className='close'>×</span> : ''}
-      {imgSrc ? <img src={imgSrc} alt={altText} /> : ''}
+      {closeCard ? <span className='close'>&times;</span> : ''}
+      {imgSrc ? <img src={imgSrc} alt={altText} width={imgWidth} /> : ''}
       {title ? <h1>{title}</h1> : ''}
       <br />
       {description ? <p>{description}</p> : ''}

@@ -17,7 +17,7 @@
 }
 
 .menu-bars {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   font-size: 2rem;
   background: none;
   cursor: pointer;
@@ -28,7 +28,7 @@
   background-clip: padding-box;
   border: 2px solid transparent;
   backdrop-filter: blur(40px);
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
   box-shadow: 3px 3px 5px rgba(46, 54, 68, 0.5);
   width: 250px;
   height: 100vh;

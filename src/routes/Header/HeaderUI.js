@@ -16,7 +16,6 @@ const Header = () => {
           Be sure to visit my projects page and send me a message via the
           contact button!
         </p>
-        <Button label='View Projects' />
       </div>
       <div className='social_icons'>
         <a
