@@ -8,7 +8,6 @@ const projectSrc = [
     projImg: {
       imgSrc: nextJSImg,
       altText: 'next js landing page',
-      width: '350px',
     },
     projDescription:
       'Project converted from standard HTML/CSS and optimized for Next JS. Posts are linked to articles written in .md files. Files are then parsed and compiled using Marked and gray-matter packages.',
@@ -28,7 +27,6 @@ const projectSrc = [
     projImg: {
       imgSrc: reactModalImg,
       altText: 'modal pop up window',
-      width: '350px',
     },
     projDescription:
       "Modal appears when user's mouse leaves the main content area. Cookies are also used to prevent the modal from popping upagain for a preset amount of time if they decide they are not interested in the offer.",
@@ -44,11 +42,10 @@ const projectSrc = [
     ],
   },
   {
-    projTitle: 'Top Quality Painting Co',
+    projTitle: 'WordPress: Top Quality Painting Co',
     projImg: {
       imgSrc: topQualityPaintImg,
       altText: 'wordpress website',
-      width: '350px',
     },
     projDescription:
       'Responsive 5-page website layout made with WordPress using the Divi design tool.proj consists of custom CSS used for styling.',

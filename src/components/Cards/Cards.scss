@@ -1,7 +1,9 @@
 .card {
   margin: 0 auto;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.075);
@@ -12,11 +14,8 @@
   box-shadow: 3px 3px 5px rgba(46, 54, 68, 0.5);
   opacity: 0;
 
-  img {
-    object-fit: cover;
-  }
   h1 {
-    margin: 1.8rem 1.8rem 1rem;
+    margin: 1.8rem 1.8rem 1.5rem;
     text-align: center;
     color: #fff;
     font-size: 1.8rem;
@@ -27,24 +26,6 @@
     color: #fff;
     max-width: 40ch;
     line-height: 1.8;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #fff;
-  font-size: 3rem;
-
-  &:hover {
-    opacity: 0.7;
-    cursor: pointer;
   }
 }
 

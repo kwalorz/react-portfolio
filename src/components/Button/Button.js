@@ -1,9 +1,9 @@
 import './ButtonStyles.css';
 
-const Button = ({ addClass, onClick, type, label, link, children }) => {
+const Button = ({ onClick, type, label, link, hidden, children }) => {
   return (
     <button
-      className={`btn ${addClass ? addClass : ''}`}
+      className={`btn ${hidden && 'btn-hidden'}`}
       onClick={onClick}
       type={type}
     >

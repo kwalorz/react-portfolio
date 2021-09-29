@@ -1,27 +1,15 @@
 import './Cards.css';
 
-const Card = ({
-  imgSrc,
-  altText,
-  title,
-  description,
-  imgWidth,
-  delay,
-  closeCard,
-  children,
-}) => {
+const Card = ({ title, delay, addAnimation, children }) => {
   return (
     <div
       className='card'
       style={{
-        animation: `openCards 0.5s ${delay ? delay * 850 : 0}ms  forwards`,
+        animation: `openCards 0.5s ${delay ? delay : 0}ms  forwards`,
+        addAnimation,
       }}
     >
-      {closeCard ? <span className='close'>&times;</span> : ''}
-      {imgSrc ? <img src={imgSrc} alt={altText} width={imgWidth} /> : ''}
-      {title ? <h1>{title}</h1> : ''}
-      <br />
-      {description ? <p>{description}</p> : ''}
+      {title && <h1>{title}</h1>}
       {children}
     </div>
   );
