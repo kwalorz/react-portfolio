@@ -12,14 +12,16 @@
   background-image: url(../img/layered-waves-top.svg);
   position: absolute;
   top: 0;
-  animation: wave_right linear 25s infinite;
+  left: -50%;
+  animation: wave_right linear 30s infinite;
 }
 
 .layer-bottom {
   background-image: url(../img/layered-waves-bottom.svg);
   position: absolute;
+  right: -50%;
   bottom: 0;
-  animation: wave_left linear 25s infinite;
+  animation: wave_left linear 30s infinite;
 }
 
 @keyframes wave_right {
